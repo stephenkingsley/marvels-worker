@@ -1,0 +1,42 @@
+{
+  "name": "marvels-worker",
+  "version": "0.1.1",
+  "description": "can do whatever you want in browser worker",
+  "lib": "lib/marvels-worker.js",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "rollup --config ./rollup/rollup.config.dev.js --watch",
+    "build:dev": "rollup --config ./rollup/rollup.config.dev.js",
+    "build:es": "rollup --config ./rollup/rollup.config.es.js",
+    "build:umd": "rollup --config ./rollup/rollup.config.umd.js",
+    "build": "rm -rf dist/ lib/ && npm run build:dev && npm run build:umd && npm run build:es",
+    "lint": "eslint ./src",
+    "prepublish": "npm run test && npm run build",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenkingsley/marvels-worker.git"
+  },
+  "keywords": [
+    "worker"
+  ],
+  "author": "stephen.kingsley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenkingsley/marvels-worker/issues"
+  },
+  "homepage": "https://github.com/stephenkingsley/marvels-worker#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^4.0.0"
+  }
+}

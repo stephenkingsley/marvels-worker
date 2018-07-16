@@ -1,3 +1,7 @@
+# Build package
+dist/
+lib/
+
 # Logs
 logs
 *.log
