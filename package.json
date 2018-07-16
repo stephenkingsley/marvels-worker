@@ -1,6 +1,6 @@
 {
   "name": "marvels-worker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "can do whatever you want in browser worker",
   "lib": "lib/marvels-worker.js",
   "main": "src/index.js",
